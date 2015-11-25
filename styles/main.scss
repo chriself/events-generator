@@ -50,12 +50,12 @@ body {
         font-size: 3vw;
     }
     &:after {
-        content: "#GAFreelancer";
+        content: "#Hashtag";
         text-align: left;
     }
 
     &:before {
-        content: "Wifi: WL Guest\00a0\00a0\00a0\00a0\00a0Password: WORKLIFE@1";
+        content: "Wifi: \00a0\00a0\00a0\00a0\00a0Password: ";
         text-align: right;
         font-size: 1.8vw;
         color: darken($white, 50);
