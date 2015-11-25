@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'TrasandinaBlack';
+  src: url("../fonts/TrasandinaBlack.otf"); }
+@font-face {
+  font-family: 'TrasandinaBold';
+  src: url("../fonts/TrasandinaBold.otf"); }
+body {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  color: #ffffff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url(https://s3.amazonaws.com/ga-core/core/core-static/metros/default-background.jpg);
+  cursor: none; }
+
+.rsArrow {
+  display: none !important; }
+
+.rsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.rsSlide, .rsOverflow {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url(https://s3.amazonaws.com/ga-core/core/core-static/metros/default-background.jpg) !important; }
+
+.message:before, .message:after {
+  display: block;
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+  left: 2vw;
+  z-index: 100;
+  text-align: right;
+  font-size: 3vw; }
+.message:after {
+  content: "#GAFreelancer";
+  text-align: left; }
+.message:before {
+  content: "Wifi: WL Guest\00a0\00a0\00a0\00a0\00a0Password: WORKLIFE@1";
+  text-align: right;
+  font-size: 1.8vw;
+  color: gray; }
+
+.footer {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 2vw;
+  padding: 1vw 1.5vw 1.5vw;
+  background-color: #000000; }
+  .footer span {
+    color: #ff0032; }
+  .footer img {
+    height: 2.3vw;
+    margin-bottom: -0.7vw; }
+
+.climb-feed {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5vh;
+  color: #ffffff; }
+  .climb-feed a {
+    color: #000000;
+    text-decoration: none; }
+  .climb-feed .climb__tile, .climb-feed .climb__tile__content, .climb-feed .climb-slideshow__panel {
+    background-color: #ff0032; }
+  .climb-feed .climb-slideshow__panel {
+    min-width: 450px; }
+  .climb-feed .climb-slideshow__panel {
+    border-radius: 0 !important;
+    border-bottom-right-radius: 2vw !important;
+    box-shadow: none !important; }
+  .climb-feed .climb-slideshow__slide--has-no-image .climb-slideshow__panel {
+    border-top-left-radius: 2vw !important;
+    padding: 45px;
+    max-height: 80vh;
+    overflow: hidden; }
+  .climb-feed .climb-slideshow__slide--has-image .climb__message {
+    margin-bottom: 30px;
+    font-size: 130%; }
+  .climb-feed .climb-slideshow__slide--has-image .climb__image {
+    max-height: 77vh; }
+  .climb-feed .climb__message {
+    line-height: 1.05; }
+    .climb-feed .climb__message a {
+      white-space: normal;
+      max-width: 100%;
+      overflow: initial; }
+  .climb-feed .climb__author img {
+    margin-left: 8px; }
+  .climb-feed .climb__tile__author__username {
+    text-transform: uppercase; }
+
+.image {
+  background-size: cover;
+  background-position: 50% 50%; }
+  .image.pattern {
+    background-position: 0 0;
+    background-size: 316px 280px; }
+
+.center {
+  width: 80vw;
+  text-align: center; }
+  .center h3 {
+    font-size: 4vw;
+    line-height: 0.9; }
+    .center h3 span {
+      color: #ff0032; }
+  .center .speakers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10vw; }
+    .center .speakers .speaker {
+      width: 30vw; }
+      .center .speakers .speaker img {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 5vw; }
+      .center .speakers .speaker h4 {
+        font-size: 1.5vw;
+        text-transform: uppercase; }
+      .center .speakers .speaker span {
+        font-size: 1vw; }
+
+/*# sourceMappingURL=main.css.map */

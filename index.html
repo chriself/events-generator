@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Climb.social | General Assembly | WORK.LIFE</title>
+
+        <meta content="Touch-enabled image gallery and content slider plugin, that focuses on providing great user experience on every desktop and mobile device." name="description">
+        <meta name="keywords" content="content slider, gallery, plugin, jquery, banner rotator">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+        <meta name="author" content="Climb.social">
+        <script class="rs-file" src="royalslider/jquery-1.8.3.min.js"></script>
+        <script class="rs-file" src="royalslider/jquery.royalslider.min.js"></script>
+        <link class="rs-file" href="royalslider/royalslider.css" rel="stylesheet">
+        <link class="rs-file" href="royalslider/skins/minimal-white/rs-minimal-white.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link href="styles/main.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="sliderContainer fullWidth clearfix">
+            <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+                <div class="rsContent logo">
+                    <div class="center">
+                        <h3>DOING MORE AT WORK + LIFE:</br><span>THE FREELANCER REVOLUTION</span></h3>
+                        <div class="speakers">
+                            <div class="speaker">
+                                <img src="img/speaker1.png">
+                                <h4>David Kosky</h4>
+                                <span>Co-founder, Worklife</span>
+                            </div>
+                            <div class="speaker">
+                                <img src="img/speaker2.png">
+                                <h4>Matt Dowling</h4>
+                                <span>Director, The Freelancer Club</span>
+                            </div>
+                            <div class="speaker">
+                                <img src="img/speaker3.png">
+                                <h4>Paul Miller</h4>
+                                <span>CEO & Founder, Digital Workplace Group</span>
+                            </div>
+                            <div class="speaker">
+                                <img src="img/speaker4.png">
+                                <h4>Melissa Jun Rowley</h4>
+                                <span>Journalist, entrepreneur, activist & international speaker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div>
+                            <img class="sponsor-logo" src="https://ga-navi-production-herokuapp-com.global.ssl.fastly.net/assets/ga-lockup-71fbaaab518d174889a54e55cef043ba56a2a04e617235b74b1a9241f2791665.png">
+                            <span>+</span>
+                            <img class="sponsor-logo" src="img/worklife_long-logo.png">
+                        </div>
+                        <img class="sponsor-logo" src="img/climb_powered-by.png">
+                    </div>
+                </div>
+                <div class="rsContent message">
+                    <div class="climb-feed">
+                        <div class="climb-slideshow" data-collection-id="564b580845284eca7c71a858" data-delay="7"></div>
+                    </div>
+                    <div class="footer">
+                        <div>
+                            <img class="sponsor-logo" src="https://ga-navi-production-herokuapp-com.global.ssl.fastly.net/assets/ga-lockup-71fbaaab518d174889a54e55cef043ba56a2a04e617235b74b1a9241f2791665.png">
+                            <span>+</span>
+                            <img class="sponsor-logo" src="img/worklife_long-logo.png">
+                        </div>
+                        <img class="sponsor-logo" src="img/climb_powered-by.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script id="addJS">
+            jQuery(document).ready(function($) {
+                $('#full-width-slider').royalSlider({
+                    transitionType: 'fade',
+                    keyboardNavEnabled: true,
+                    fullscreen: {
+                        enabled: true,
+                        buttonFS: false,
+                        nativeFS: false
+                    },
+
+                    startSlideId: 0,
+
+                    controlNavigation: 'none'
+                });
+
+                var slider = $('#full-width-slider').data('royalSlider');
+                slider.enterFullscreen();
+            });
+        </script>
+        <script src="//fb.me/react-0.14.0.min.js"></script>
+        <script src="//fb.me/react-dom-0.14.0.min.js"></script>
+        <script src="//cdn.rawgit.com/climb-social/react-climb-social/v1.2.0/dist/react-climb-social.min.js"></script>
+    </body>
+
+</html>
