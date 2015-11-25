@@ -50,12 +50,12 @@ body {
         font-size: 3vw;
     }
     &:after {
-        content: "#Hashtag";
+        content: "#health2eu";
         text-align: left;
     }
 
     &:before {
-        content: "Wifi: \00a0\00a0\00a0\00a0\00a0Password: ";
+        content: "Wifi: ";
         text-align: right;
         font-size: 1.8vw;
         color: darken($white, 50);

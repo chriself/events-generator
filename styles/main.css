@@ -32,10 +32,10 @@ body {
   text-align: right;
   font-size: 3vw; }
 .message:after {
-  content: "#Hashtag";
+  content: "#health2eu";
   text-align: left; }
 .message:before {
-  content: "Wifi: \00a0\00a0\00a0\00a0\00a0Password: ";
+  content: "Wifi: ";
   text-align: right;
   font-size: 1.8vw;
   color: gray; }
