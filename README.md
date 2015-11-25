@@ -1,6 +1,6 @@
-# general-assembly-event
+# ga-campus-event
 
-A static site for hosting the General Assembly / WORK.LIFE Climb.social feed.
+A static site for hosting the General Assembly / Google Campus Climb.social feed.
 
 ## Please see gh-pages branch for site.
 
