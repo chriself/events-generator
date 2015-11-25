@@ -35,7 +35,7 @@ body {
   content: "#health2eu";
   text-align: left; }
 .message:before {
-  content: "Wifi: ";
+  content: "Wifi: CampusGuest-FAST";
   text-align: right;
   font-size: 1.8vw;
   color: gray; }
