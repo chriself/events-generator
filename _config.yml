@@ -1,0 +1,9 @@
+collections:
+  events:
+    output: true
+defaults:
+    scope:
+      path: ""
+      type: events
+    values:
+      layout: s+c

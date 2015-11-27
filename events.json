@@ -1,0 +1,9 @@
+---
+---
+
+"events":[
+	{% for event in site.events %}{
+        "title": "{{ event.title }}",
+		"url": "{{ employee.url }}"
+    }{% unless forloop.last %}, {% endunless %}{% endfor %}
+]

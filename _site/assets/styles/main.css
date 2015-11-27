@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: 'Karla', sans-serif;
   color: #ffffff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url(https://s3.amazonaws.com/ga-core/core/core-static/metros/default-background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url();
   cursor: none; }
 
 .rsArrow {
@@ -20,7 +20,7 @@ body {
   justify-content: center; }
 
 .rsSlide, .rsOverflow {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url(https://s3.amazonaws.com/ga-core/core/core-static/metros/default-background.jpg) !important; }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url() !important; }
 
 .message:before, .message:after {
   display: block;
@@ -32,10 +32,8 @@ body {
   text-align: right;
   font-size: 3vw; }
 .message:after {
-  content: "#health2eu";
   text-align: left; }
 .message:before {
-  content: "Wifi: CampusGuest-FAST";
   text-align: right;
   font-size: 1.8vw;
   color: gray; }
@@ -111,7 +109,7 @@ body {
       color: #ff0032; }
   .center .speakers {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 10vw; }
     .center .speakers .speaker {
       width: 30vw; }
@@ -124,5 +122,3 @@ body {
         text-transform: uppercase; }
       .center .speakers .speaker span {
         font-size: 1vw; }
-
-/*# sourceMappingURL=main.css.map */
