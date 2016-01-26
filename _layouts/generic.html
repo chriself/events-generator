@@ -17,11 +17,8 @@
         <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700' rel='stylesheet' type='text/css'>
         <link href="../assets/styles/main.css" rel="stylesheet">
         <style>
-            body {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0.701961)), url("{{ page.background }}");
-            }
             .rsSlide {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0.701961)), url("{{ page.background }}") !important;
+                background-image: url("{{ page.background }}") !important;
             }
             .message:after {
                 content: "{{ page.hashtag }}";
@@ -33,7 +30,7 @@
         </style>
     </head>
 
-    <body>
+    <body class="{{ page.theme }}-theme">
         <div class="sliderContainer fullWidth clearfix">
             <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
                 <div class="rsContent message">
@@ -63,7 +60,7 @@
                 </div>
                 <div class="rsContent message">
                     <div class="climb-feed">
-                        <div class="climb-slideshow" data-collection-id="{{ page.collectionid }}" data-delay="7"></div>
+                        <div class="climb-slideshow" data-collection-id="{{ page.collectionid }}" data-delay="7" data-domain="http://curate.vm-08.graph.uk/"></div>
                     </div>
                     <div class="footer">
                         <div>
@@ -77,6 +74,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
         <script id="addJS">
             jQuery(document).ready(function($) {
                 $('#full-width-slider').royalSlider({
@@ -95,11 +93,50 @@
 
                 var slider = $('#full-width-slider').data('royalSlider');
                 slider.enterFullscreen();
+
+                var SLIDE_NUMBER_LOCATION = 'https://climb-slide-switcher.firebaseio.com/events/{{ page.slide_number }}/slide';
+                var slideRef = new Firebase(SLIDE_NUMBER_LOCATION);
+
+                // Attach an asynchronous callback to read the data at our posts reference
+                slideRef.on("value", function(snapshot) {
+                    console.log(snapshot.val());
+                    try {
+                        if (document.location.search.substr(1) != "manual=true") {
+                            if (snapshot.exists()){
+                                slider.goTo(snapshot.val());
+                            }
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                }, function(errorObject) {
+                    console.log("The read failed: " + errorObject.code);
+                });
+
+                var RESTART_LOCATION = 'https://climb-slide-switcher.firebaseio.com/events/{{ page.slide_number }}/restart';
+                var restartRef = new Firebase(RESTART_LOCATION);
+
+                // Attach an asynchronous callback to read the data at our posts reference
+                restartRef.on("value", function(snapshot) {
+                    try {
+                        if (snapshot.val() == "y") {
+                            window.location.reload()
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                }, function(errorObject) {
+                    console.log("The read failed: " + errorObject.code);
+                });
+
+
             });
         </script>
         <script src="//fb.me/react-0.14.0.min.js"></script>
         <script src="//fb.me/react-dom-0.14.0.min.js"></script>
-        <script src="//cdn.rawgit.com/climb-social/react-climb-social/v1.2.0/dist/react-climb-social.min.js"></script>
+        <script src="//cdn.rawgit.com/climb-social/react-climb-social/v1.3.0/dist/react-climb-social.min.js"></script>
     </body>
 
 </html>

@@ -8,7 +8,6 @@ body {
   margin: 0;
   font-family: 'Karla', sans-serif;
   color: #ffffff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url();
   cursor: none; }
 
 .rsArrow {
@@ -18,9 +17,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-
-.rsSlide, .rsOverflow {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.70196), rgba(0, 0, 0, 0.70196)), url() !important; }
 
 .message:before, .message:after {
   display: block;
@@ -122,3 +118,28 @@ body {
         text-transform: uppercase; }
       .center .speakers .speaker span {
         font-size: 1vw; }
+
+.worklife-theme {
+  font-family: 'TrasandinaBold', sans-serif; }
+  .worklife-theme h3 {
+    font-family: 'TrasandinaBlack', sans-serif; }
+    .worklife-theme h3 span {
+      font-family: 'TrasandinaBold', sans-serif;
+      color: #ffffff; }
+  .worklife-theme .footer {
+    color: #ffffff;
+    background-color: #322f3f; }
+    .worklife-theme .footer span {
+      color: #ffffff; }
+  .worklife-theme .rsSlide {
+    background-size: cover; }
+  .worklife-theme .climb-feed {
+    font-family: 'TrasandinaBold', sans-serif;
+    color: #ffffff; }
+    .worklife-theme .climb-feed a {
+      color: #b0acc1;
+      text-decoration: none; }
+    .worklife-theme .climb-feed .climb__tile, .worklife-theme .climb-feed .climb__tile__content, .worklife-theme .climb-feed .climb-slideshow__panel {
+      background-color: #322f3f; }
+  .worklife-theme .message:before {
+    color: #b0acc1; }

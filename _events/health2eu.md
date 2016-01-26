@@ -17,4 +17,5 @@ collectionid: 5655f8d445284e97209e2ea3
 background: https://s3.amazonaws.com/ga-core/core/core-static/metros/default-background.jpg
 hashtag: "#health2eu"
 wifi: "Wifi: CampusGuest-FAST"
+slide_number: health2eu
 ---

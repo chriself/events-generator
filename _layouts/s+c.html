@@ -77,6 +77,7 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
         <script id="addJS">
             jQuery(document).ready(function($) {
                 $('#full-width-slider').royalSlider({
@@ -95,6 +96,43 @@
 
                 var slider = $('#full-width-slider').data('royalSlider');
                 slider.enterFullscreen();
+
+                var SLIDE_NUMBER_LOCATION = 'https://climb-slide-switcher.firebaseio.com/events/{{ page.slide_number }}/slide';
+                var slideRef = new Firebase(SLIDE_NUMBER_LOCATION);
+
+                // Attach an asynchronous callback to read the data at our posts reference
+                slideRef.on("value", function(snapshot) {
+                    console.log(snapshot.val());
+                    try {
+                        if (document.location.search.substr(1) != "manual=true") {
+                            slider.goTo(snapshot.val());
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                }, function(errorObject) {
+                    console.log("The read failed: " + errorObject.code);
+                });
+
+                var RESTART_LOCATION = 'https://climb-slide-switcher.firebaseio.com/events/{{ page.slide_number }}/restart';
+                var restartRef = new Firebase(RESTART_LOCATION);
+                
+                // Attach an asynchronous callback to read the data at our posts reference
+                restartRef.on("value", function(snapshot) {
+                    try {
+                        if (snapshot.val() == "y") {
+                            window.location.reload()
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                }, function(errorObject) {
+                    console.log("The read failed: " + errorObject.code);
+                });
+
+
             });
         </script>
         <script src="//fb.me/react-0.14.0.min.js"></script>

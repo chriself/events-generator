@@ -4,7 +4,7 @@
 $black: #000000;
 $white: #ffffff;
 $red: #ff0032;
-$purple: #333040;
+$purple: #322f3f;
 $orange: #FBB040;
 
 
@@ -22,7 +22,6 @@ body {
     margin: 0;
     font-family: 'Karla', sans-serif;
     color:$white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0.701961)), url({{ page.background }});
     cursor:none;
 }
 
@@ -37,9 +36,7 @@ body {
 }
 
 .rsSlide, .rsOverflow {
-    // background: rgba(0,0,0,0) !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0.701961)), url({{ page.background }}) !important;
-}
+    }
 
 .message{
     &:before, &:after {
@@ -188,6 +185,52 @@ body {
             span {
                 font-size: 1vw;
             }
+        }
+    }
+}
+
+.worklife-theme {
+    font-family: 'TrasandinaBold', sans-serif;
+    h3 {
+        font-family: 'TrasandinaBlack', sans-serif;
+        span {
+            font-family: 'TrasandinaBold', sans-serif;
+            color:$white;
+        }
+    }
+    .footer {
+        color:$white;
+        background-color: $purple;
+        span {
+            color: $white;
+        }
+    }
+    .rsSlide {
+        background-size: cover;
+    }
+    .climb-feed {
+        font-family: 'TrasandinaBold', sans-serif;
+
+
+        color: $white;
+
+        a {
+            color: lighten($purple, 50);
+            text-decoration: none;
+        }
+
+        .climb-social-badge {
+            // display: none;
+        }
+
+        .climb__tile, .climb__tile__content, .climb-slideshow__panel {
+            background-color: $purple;
+        }
+    }
+
+    .message{
+        &:before {
+            color: lighten($purple, 50);
         }
     }
 }
