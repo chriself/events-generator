@@ -18,6 +18,6 @@ sponsors:
 collectionid: 56a7aa4308216f2a8021cfcd
 background: ../assets/img/backgrounds/worklife.jpg
 hashtag: "#risesocial"
-wifi: "Wifi: WL Guest   Password: WORKLIFE@1"
+wifi: "Wifi: WL Guest   Password: work.life@1"
 slide_number: risesocial
 ---
