@@ -1,6 +1,6 @@
-# ga-event
+# events-generator
 
-A static site generator for hosting the General Assembly / Climb.social feed.
+A static site generator for hosting and making  Climb.social feed events.
 
 ## Please see gh-pages branch for site.
 
