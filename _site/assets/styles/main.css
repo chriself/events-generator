@@ -122,15 +122,28 @@ body {
 .worklife-theme {
   font-family: 'TrasandinaBold', sans-serif; }
   .worklife-theme h3 {
-    font-family: 'TrasandinaBlack', sans-serif; }
+    font-family: 'TrasandinaBlack', sans-serif;
+    font-size: 5vw; }
     .worklife-theme h3 span {
       font-family: 'TrasandinaBold', sans-serif;
-      color: #ffffff; }
+      color: #ffffff;
+      font-size: 4vw; }
+  .worklife-theme .speakers .speaker img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 5vw; }
+  .worklife-theme .speakers .speaker h4 {
+    font-size: 2vw;
+    color: #f9af3f; }
+  .worklife-theme .speakers .speaker span {
+    font-size: 1.5vw; }
   .worklife-theme .footer {
     color: #ffffff;
     background-color: #322f3f; }
     .worklife-theme .footer span {
       color: #ffffff; }
+    .worklife-theme .footer .climb-logo {
+      opacity: 0.75; }
   .worklife-theme .rsSlide {
     background-size: cover; }
   .worklife-theme .climb-feed {
@@ -139,7 +152,14 @@ body {
     .worklife-theme .climb-feed a {
       color: #b0acc1;
       text-decoration: none; }
+    .worklife-theme .climb-feed .climb-slideshow__slide--has-image .climb__message {
+      margin-bottom: 30px;
+      font-size: 6vh; }
+    .worklife-theme .climb-feed .climb-slideshow__slide--has-image .climb__image {
+      max-width: 50vw; }
     .worklife-theme .climb-feed .climb__tile, .worklife-theme .climb-feed .climb__tile__content, .worklife-theme .climb-feed .climb-slideshow__panel {
       background-color: #322f3f; }
+    .worklife-theme .climb-feed .climb__tile__author__username {
+      color: #f9af3f; }
   .worklife-theme .message:before {
-    color: #b0acc1; }
+    color: rgba(255, 255, 255, 0.75); }

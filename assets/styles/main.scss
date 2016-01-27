@@ -6,6 +6,7 @@ $white: #ffffff;
 $red: #ff0032;
 $purple: #322f3f;
 $orange: #FBB040;
+$orange-light: #f9af3f;
 
 
 @font-face {
@@ -193,9 +194,26 @@ body {
     font-family: 'TrasandinaBold', sans-serif;
     h3 {
         font-family: 'TrasandinaBlack', sans-serif;
+        font-size: 5vw;
         span {
             font-family: 'TrasandinaBold', sans-serif;
             color:$white;
+            font-size: 4vw;
+        }
+    }
+
+    .speakers .speaker {
+        img {
+            width: 10vw;
+            height: 10vw;
+            border-radius: 5vw;
+        }
+        h4 {
+            font-size: 2vw;
+            color: $orange-light;
+        }
+        span {
+            font-size: 1.5vw;
         }
     }
     .footer {
@@ -203,6 +221,9 @@ body {
         background-color: $purple;
         span {
             color: $white;
+        }
+        .climb-logo {
+            opacity: 0.75;
         }
     }
     .rsSlide {
@@ -223,14 +244,29 @@ body {
             // display: none;
         }
 
+        .climb-slideshow__slide--has-image {
+            .climb__message {
+                margin-bottom: 30px;
+                font-size: 6vh;
+            }
+            .climb__image {
+                max-width: 50vw;
+                // min-height: 20vh;
+            }
+        }
+
         .climb__tile, .climb__tile__content, .climb-slideshow__panel {
             background-color: $purple;
+        }
+
+        .climb__tile__author__username {
+            color: $orange-light;
         }
     }
 
     .message{
         &:before {
-            color: lighten($purple, 50);
+            color: transparentize($white, 0.25);
         }
     }
 }
